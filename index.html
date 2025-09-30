@@ -1,1 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alabama Turtle & Tortoise Conservation Guide</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b170c; /* Dark, natural background */
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+        .accordion-header.active .icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- Header Section -->
+        <header class="text-center mb-8 p-6 bg-gradient-to-r from-emerald-700 to-green-900 rounded-xl shadow-2xl">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-2 tracking-tight">
+                Alabama Turtle & Tortoise Conservation
+            </h1>
+            <p class="text-lg md:text-xl text-emerald-100 font-light">
+                Five Species of High Conservation Concern in the State
+            </p>
+        </header>
+
+        <!-- Species Accordion Container -->
+        <div id="species-container" class="space-y-4">
+
+            <!-- 1. Kemp's Ridley Sea Turtle -->
+            <div class="species-card bg-white/5 rounded-xl shadow-lg border border-emerald-600/50 overflow-hidden">
+                <button class="accordion-header flex justify-between items-center w-full p-5 text-left bg-emerald-700 hover:bg-emerald-600 transition duration-300 text-white font-semibold text-xl md:text-2xl rounded-t-xl" onclick="toggleAccordion(this)">
+                    <span class="flex items-center">
+                        <span class="text-3xl mr-3">🌊</span> Kemp's Ridley Sea Turtle <span class="text-sm ml-2">(Lepidochelys kempii)</span>
+                    </span>
+                    <span class="icon transform transition-transform duration-300">▼</span>
+                </button>
+                <div class="accordion-content p-5 bg-white/10 text-emerald-100">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Left Column: Info -->
+                        <div>
+                            <h2 class="text-2xl font-bold mb-3 text-emerald-400">ℹ️ Species Information</h2>
+                            <p><strong>Status:</strong> <span class="text-red-400 font-bold">Endangered</span> (U.S. and State).</p>
+                            <p class="mt-1"><strong>Description:</strong> The <strong>smallest</strong> sea turtle. Shell is nearly circular, smooth, and **gray or gray-green**.</p>
+                            <p class="mt-1"><strong>Diet:</strong> Primarily **carnivorous**, feeding mainly on **crabs**, snails, and clams.</p>
+                            
+                            <h2 class="text-2xl font-bold mt-4 mb-3 text-emerald-400">🏡 Habitat & Alabama Presence</h2>
+                            <p><strong>Habitat:</strong> Shallow, nearshore **coastal (neritic) habitats** with muddy or sandy bottoms.</p>
+                            <p class="mt-1"><strong>In AL:</strong> An **occasional visitor** to Alabama's coastal and bay waters (Mobile/Baldwin Counties), with **nesting being extremely rare**.</p>
+
+                            <h2 class="text-2xl font-bold mt-4 mb-3 text-emerald-400">🥚 Nesting & Movement</h2>
+                            <p><strong>Nesting:</strong> Nesting occurs in mass, synchronized events (*arribada*) mainly in Mexico. Unique for **routinely nesting during the day**.</p>
+                            <p class="mt-1"><strong>Tracks:</strong> Leaves a **narrow** trail with an **alternating flipper pattern** on the sand.</p>
+                        </div>
+                        <!-- Right Column: Image/Tracking -->
+                        <div class="bg-gray-800 p-4 rounded-lg flex flex-col justify-center items-center">
+                            <!-- Placeholder for Image/Tracking -->
+                            <img src="https://placehold.co/400x250/065f46/ffffff?text=Kemp's+Ridley+Image" alt="Placeholder image of Kemp's Ridley sea turtle" class="rounded-lg mb-2">
+                            <p class="text-sm text-gray-400 italic mt-2">
+                                <!-- Image Tag: 
+
+[Image of Kemp's Ridley sea turtle]
+ -->
+                                Biologists track movement via satellite telemetry.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Loggerhead Sea Turtle -->
+            <div class="species-card bg-white/5 rounded-xl shadow-lg border border-orange-600/50 overflow-hidden">
+                <button class="accordion-header flex justify-between items-center w-full p-5 text-left bg-orange-700 hover:bg-orange-600 transition duration-300 text-white font-semibold text-xl md:text-2xl" onclick="toggleAccordion(this)">
+                    <span class="flex items-center">
+                        <span class="text-3xl mr-3">🐢</span> Loggerhead Sea Turtle <span class="text-sm ml-2">(Caretta caretta)</span>
+                    </span>
+                    <span class="icon transform transition-transform duration-300">▼</span>
+                </button>
+                <div class="accordion-content p-5 bg-white/10 text-orange-100">
+                     <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Left Column: Info -->
+                        <div>
+                            <h2 class="text-2xl font-bold mb-3 text-orange-400">ℹ️ Species Information</h2>
+                            <p><strong>Status:</strong> <span class="text-yellow-400 font-bold">Threatened</span>.</p>
+                            <p class="mt-1"><strong>Description:</strong> Most common nester in AL. Known for its **large head** and powerful jaws. Shell is reddish-brown.</p>
+                            <p class="mt-1"><strong>Diet:</strong> Primarily **carnivorous** bottom feeder, crushing hard-shelled prey like **mollusks and crustaceans**.</p>
+                            
+                            <h2 class="text-2xl font-bold mt-4 mb-3 text-orange-400">🏡 Habitat & Alabama Presence</h2>
+                            <p><strong>Habitat:</strong> Highly adaptable, found in offshore waters, **bays, lagoons, and salt marshes**.</p>
+                            <p class="mt-1"><strong>In AL:</strong> Nests regularly, though sparsely, on Alabama's coastal beaches from **Dauphin Island to the Florida border**.</p>
+
+                            <h2 class="text-2xl font-bold mt-4 mb-3 text-orange-400">🥚 Nesting & Movement</h2>
+                            <p><strong>Nesting:</strong> Solitary, **night-time nesters**. Lay 3-5 nests per season (approx. 100 eggs each).</p>
+                            <p class="mt-1"><strong>Tracks:</strong> Leaves a **broad, wide trail** with a distinct, deep, and **continuous drag mark** down the center (from the plastron).</p>
+                        </div>
+                        <!-- Right Column: Image/Tracking -->
+                        <div class="bg-gray-800 p-4 rounded-lg flex flex-col justify-center items-center">
+                            <!-- Placeholder for Image/Tracking -->
+                            <img src="https://placehold.co/400x250/9a3412/ffffff?text=Loggerhead+Track+Image" alt="Placeholder image of Loggerhead sea turtle tracks" class="rounded-lg mb-2">
+                            <p class="text-sm text-gray-400 italic mt-2">
+                                <!-- Image Tag:  -->
+                                The continuous central drag mark distinguishes its track.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Gopher Tortoise -->
+            <div class="species-card bg-white/5 rounded-xl shadow-lg border border-yellow-600/50 overflow-hidden">
+                <button class="accordion-header flex justify-between items-center w-full p-5 text-left bg-yellow-700 hover:bg-yellow-600 transition duration-300 text-white font-semibold text-xl md:text-2xl" onclick="toggleAccordion(this)">
+                    <span class="flex items-center">
+                        <span class="text-3xl mr-3">🏜️</span> Gopher Tortoise <span class="text-sm ml-2">(Gopherus polyphemus)</span>
+                    </span>
+                    <span class="icon transform transition-transform duration-300">▼</span>
+                </button>
+                <div class="accordion-content p-5 bg-white/10 text-yellow-100">
+                     <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Left Column: Info -->
+                        <div>
+                            <h2 class="text-2xl font-bold mb-3 text-yellow-400">ℹ️ Species Information</h2>
+                            <p><strong>Status:</strong> <span class="text-yellow-400 font-bold">Threatened</span> (Federally protected in western AL counties).</p>
+                            <p class="mt-1"><strong>Description:</strong> Large, entirely **terrestrial** reptile and a **keystone species**. Has specialized, flattened front feet for digging.</p>
+                            <p class="mt-1"><strong>Diet:</strong> Strictly **herbivorous**, eating grasses, wiregrass, and low-growing plants.</p>
+                            
+                            <h2 class="text-2xl font-bold mt-4 mb-3 text-yellow-400">🏡 Habitat & Alabama Presence</h2>
+                            <p><strong>Habitat:</strong> Dry, deep **sandy soils** with open canopy—typically the longleaf pine-scrub oak-wiregrass sandhills.</p>
+                            <p class="mt-1"><strong>In AL:</strong> Found in the **coastal plain counties** of South Alabama.</p>
+
+                            <h2 class="text-2xl font-bold mt-4 mb-3 text-yellow-400">🥚 Nesting & Movement</h2>
+                            <p><strong>Nesting:</strong> Lays eggs near the entrance, or **apron**, of its own deep, characteristic **mousehole-shaped burrow**.</p>
+                            <p class="mt-1"><strong>Tracks:</strong> Leaves a clear **single file trail** leading from the burrow apron to foraging areas, showing distinct foot impressions.</p>
+                        </div>
+                        <!-- Right Column: Image/Tracking -->
+                        <div class="bg-gray-800 p-4 rounded-lg flex flex-col justify-center items-center">
+                            <!-- Placeholder for Image/Tracking -->
+                            <img src="https://placehold.co/400x250/92400e/ffffff?text=Gopher+Tortoise+Track+Image" alt="Placeholder image of Gopher Tortoise tracks" class="rounded-lg mb-2">
+                            <p class="text-sm text-gray-400 italic mt-2">
+                                <!-- Image Tag:  -->
+                                Burrows can be up to 30 feet long and 9 feet deep.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Flattened Musk Turtle -->
+            <div class="species-card bg-white/5 rounded-xl shadow-lg border border-blue-600/50 overflow-hidden">
+                <button class="accordion-header flex justify-between items-center w-full p-5 text-left bg-blue-700 hover:bg-blue-600 transition duration-300 text-white font-semibold text-xl md:text-2xl" onclick="toggleAccordion(this)">
+                    <span class="flex items-center">
+                        <span class="text-3xl mr-3">🏞️</span> Flattened Musk Turtle <span class="text-sm ml-2">(Sternotherus depressus)</span>
+                    </span>
+                    <span class="icon transform transition-transform duration-300">▼</span>
+                </button>
+                <div class="accordion-content p-5 bg-white/10 text-blue-100">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Left Column: Info -->
+                        <div>
+                            <h2 class="text-2xl font-bold mb-3 text-blue-400">ℹ️ Species Information</h2>
+                            <p><strong>Status:</strong> <span class="text-red-400 font-bold">Threatened</span> (U.S. and State).</p>
+                            <p class="mt-1"><strong>Description:</strong> Small, fully aquatic turtle **endemic to Alabama**. Has a distinctly **flattened** shell for hiding under rocks.</p>
+                            <p class="mt-1"><strong>Diet:</strong> Primarily **carnivorous**, feeding mainly on **snails and mussels** on the river bottom.</p>
+                            
+                            <h2 class="text-2xl font-bold mt-4 mb-3 text-blue-400">🏡 Habitat & Alabama Presence</h2>
+                            <p><strong>Habitat:</strong> **Free-flowing creeks and small rivers** with low silt and abundant **submerged boulders and crevices**.</p>
+                            <p><strong>In AL:</strong> Restricted entirely to the **upper Black Warrior River system** in west-central Alabama.</p>
+
+                            <h2 class="text-2xl font-bold mt-4 mb-3 text-blue-400">🥚 Nesting & Movement</h2>
+                            <p><strong>Nesting:</strong> Lays a very small clutch of 1–4 eggs in shallow nests dug in **high sandy banks** near the river.</p>
+                            <p><strong>Tracking:</strong> A secretive **bottom-dweller**. Biologists use **radio telemetry** to track its movement as physical tracks are rarely found on its rocky habitat.</p>
+                        </div>
+                        <!-- Right Column: Image/Tracking -->
+                        <div class="bg-gray-800 p-4 rounded-lg flex flex-col justify-center items-center">
+                            <!-- Placeholder for Image/Tracking -->
+                            <img src="https://placehold.co/400x250/1d4ed8/ffffff?text=Flattened+Musk+Turtle+Image" alt="Placeholder image of Flattened Musk Turtle" class="rounded-lg mb-2">
+                            <p class="text-sm text-gray-400 italic mt-2">
+                                <!-- Image Tag (for context):  -->
+                                Endemic means it is found naturally nowhere else in the world.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Alabama Red-bellied Turtle -->
+            <div class="species-card bg-white/5 rounded-xl shadow-lg border border-red-600/50 overflow-hidden">
+                <button class="accordion-header flex justify-between items-center w-full p-5 text-left bg-red-700 hover:bg-red-600 transition duration-300 text-white font-semibold text-xl md:text-2xl" onclick="toggleAccordion(this)">
+                    <span class="flex items-center">
+                        <span class="text-3xl mr-3">🔴</span> Alabama Red-bellied Turtle <span class="text-sm ml-2">(Pseudemys alabamensis)</span>
+                    </span>
+                    <span class="icon transform transition-transform duration-300">▼</span>
+                </button>
+                <div class="accordion-content p-5 bg-white/10 text-red-100">
+                     <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Left Column: Info -->
+                        <div>
+                            <h2 class="text-2xl font-bold mb-3 text-red-400">ℹ️ Species Information</h2>
+                            <p><strong>Status:</strong> <span class="text-red-400 font-bold">Endangered</span> (U.S. and State). **Alabama's Official State Reptile.**</p>
+                            <p class="mt-1"><strong>Description:</strong> Large freshwater turtle. Distinctive feature is its **bright red or orange plastron** (bottom shell).</p>
+                            <p class="mt-1"><strong>Diet:</strong> Almost entirely **herbivorous**, feeding on submergent aquatic plants.</p>
+                            
+                            <h2 class="text-2xl font-bold mt-4 mb-3 text-red-400">🏡 Habitat & Alabama Presence</h2>
+                            <p><strong>Habitat:</strong> Shallow, vegetated **freshwater and brackish backwaters** with soft, muddy bottoms.</p>
+                            <p class="mt-1"><strong>In AL:</strong> Restricted to the **Mobile-Tensaw River Delta** in Mobile and Baldwin Counties.</p>
+
+                            <h2 class="text-2xl font-bold mt-4 mb-3 text-red-400">🥚 Nesting & Movement</h2>
+                            <p><strong>Nesting:</strong> Nests on dry, sandy land near the delta. Lay a small clutch of **4 to 9 eggs**. Hatchlings may **over-winter** in the nest.</p>
+                            <p class="mt-1"><strong>Tracks:</strong> Leaves a **wide path** on sandy banks leading from the water to the nest site, with wide foot and tail drag marks.</p>
+                        </div>
+                        <!-- Right Column: Image/Tracking -->
+                        <div class="bg-gray-800 p-4 rounded-lg flex flex-col justify-center items-center">
+                            <!-- Placeholder for Image/Tracking -->
+                            <img src="https://placehold.co/400x250/b91c1c/ffffff?text=Red-bellied+Turtle+Image" alt="Placeholder image of Alabama Red-bellied Turtle" class="rounded-lg mb-2">
+                            <p class="text-sm text-gray-400 italic mt-2">
+                                <!-- Image Tag:  -->
+                                Coastal causeways have had fencing installed to decrease vehicle mortality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- End of Species Accordion Container -->
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-gray-400 text-sm">
+            <p>&copy; 2024 Conservation Guide. Data sourced from NOAA and Outdoor Alabama resources.</p>
+            <p>Remember to respect all protected species and their habitats.</p>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript for Accordion Functionality -->
+    <script>
+        /**
+         * Toggles the visibility of the accordion content.
+         * @param {HTMLElement} header - The button element that was clicked.
+         */
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            
+            // Close all other accordions
+            const allHeaders = document.querySelectorAll('.accordion-header');
+            allHeaders.forEach(h => {
+                if (h !== header) {
+                    h.classList.remove('active');
+                    h.nextElementSibling.style.maxHeight = null;
+                    h.nextElementSibling.classList.add('rounded-b-xl'); // Ensure other elements are rounded if closed
+                }
+            });
+
+            // Toggle the clicked accordion
+            header.classList.toggle('active');
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                content.classList.add('rounded-b-xl');
+            } else {
+                // Set max-height to the scroll height for smooth transition
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.classList.remove('rounded-b-xl'); // Remove rounded bottom when open
+            }
+        }
+    </script>
+</body>
+</html>
 
